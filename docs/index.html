@@ -1,43 +1,81 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>RKS - Rubik Kocka Solver</title>
-        <meta charset="UTF-8">
-        <meta name="keywords" content="rubik,Rubik,kocka,kirakós,varázs kocka, Rubik's, Cube, Solver, kirakó,2x2,3x3,java,program,objektum,orientált,megoldó,">
-        <meta name="description" content="Az oldal 2x2 rubik kocka kirakó java program letöltés leírása">
-        <link rel="stylesheet" href="style.css">
-		<link href='https://fonts.googleapis.com/css?family=Orbitron:700&effect=3d' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
-        <main>
-            <img id="header" src="pic/headerpic1.jpg" alt="fejléc kép">
-            <header>            
-                <div class="font-effect-3d"><h1>RKS - Rubik Kocka Solver</h1></div>		
-            </header>
-            
-            <div id="nav">
-                <ul>
-                    <li><a class="active" href="index.html"><img id="button" src="pic/home.svg" > Home</a></li>
-                    <li><a href="bemutatkozas.html"><img id="button" src="pic/smile.svg"> Bemutatkozás</a></li>
-                    <li><a href="algoritmus.html"><img id="button" src="pic/interface.svg"> Algoritmus</a></li>
-                    <li><a href="bolyai.html"><img id="button" src="pic/book.svg"> Iskolánk</a></li>
-                </ul>
-            </div>        
-            <section>
-                <h3>Mi az RKS, miről szól ez az oldal?</h3>
-				<p>2x2-es Rubik kocka kirakó program. A programot Java programozási nyelvet tanuló illetve az objektum orientált programozással ismerkedő diák első projektje. Körülbelül 2-3 napi munka óra alatt készült el a program. A legnehezebb rész a megoldó algoritmus volt.<br> A program jelenleg letölthető NetBeans projekt formájában és ott futtatható parancssoros környezetben.</p>
-                <a href="https://mega.nz/#!jksiUa5L!QrMSmWSCrp6KUDYSXDmalcRDxh28ioYUGQzObb-pBEU"><img class="displayed" src="pic/icon.svg"></a>
-				<a href="https://mega.nz/#!jksiUa5L!QrMSmWSCrp6KUDYSXDmalcRDxh28ioYUGQzObb-pBEU"><p class="letoltes"><b>Letöltés</b></p></a>
-				<h3>A program működése:</h3>
-				<p>A program 6db 2x2-es tömböt használ mint a kocka oldalai. A színek karakter formában vannak tárolva pl.: Kék - k<br>12 forgatási metódust tartalmaz a program. Úgy kell elképzelni mintha egyik oldalt magunk felé tartanánk és ahhoz viszonyítva jobb oldalt felfele vagy lefele tudjuk forgatni. forgatási metódus pl.: forgJf(); vagy forgJl();<br>
-				Ezek után egy keverési metódus a létező forgató metódusok segítségével véletlenszerűen összekeveri a kockát<br>A program legnagyobb része a kockát megoldó metódus mely az <a href="algoritmus.html">algoritmus</a> fülön található meg kifejtve.
-            </section>
-            <hr class="footerhr">
-            <footer>
-				<p>2 x 2 Rubik kocka kirakás. Metódusok, algoritmusok leírása, magyarázata. Szerző: Tóth Ágoston</p>
-                <img id="also" src="pic/kocka3.PNG" width="75px">
-            </footer>
-        </main>
-        
-    </body>
+
+<head>
+    <title>RKS - Rubik Kocka Solver</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="rubik,Rubik,kocka,kirakós,varázs kocka, Rubik's, Cube, Solver, kirakó,2x2,3x3,java,program,objektum,orientált,megoldó,">
+    <meta name="description" content="Az oldal 2x2 rubik kocka kirakó java program letöltés leírása">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron:700&effect=3d' rel='stylesheet' type='text/css'>
+    
+    <!-- open graph tags -->
+    <meta property="og:title" content="RKS2" />
+    <meta property="og:description" content="2 by 2 Rubik's cube solver algorhytm" />
+    <meta property="og:url" content="https://depictyourself.github.io/2by2-rubiks-cube-solver-algorhytm/index.html" />
+    <meta property="og:image" content="https://depictyourself.github.io/2by2-rubiks-cube-solver-algorhytm/pic/caption.jpg" />
+</head>
+
+<body>
+    <main>
+        <img id="header" src="pic/headerpic1.jpg" alt="fejléc kép">
+        <header>
+            <div class="font-effect-3d">
+                <h1>RKS - Rubik Kocka Solver</h1>
+            </div>
+        </header>
+
+        <div id="nav">
+            <ul>
+                <li>
+                    <a class="active" href="index.html">
+                        <img id="button" src="pic/home.svg"> Home</a>
+                </li>
+                <li>
+                    <a href="bemutatkozas.html">
+                        <img id="button" src="pic/smile.svg"> Bemutatkozás</a>
+                </li>
+                <li>
+                    <a href="algoritmus.html">
+                        <img id="button" src="pic/interface.svg"> Algoritmus</a>
+                </li>
+                <li>
+                    <a href="bolyai.html">
+                        <img id="button" src="pic/book.svg"> Iskolánk</a>
+                </li>
+            </ul>
+        </div>
+        <section>
+            <h3>Mi az RKS, miről szól ez az oldal?</h3>
+            <p>2x2-es Rubik kocka kirakó program. A programot Java programozási nyelvet tanuló illetve az objektum orientált
+                programozással ismerkedő diák első projektje. Körülbelül 2-3 napi munka óra alatt készült el a program. A
+                legnehezebb rész a megoldó algoritmus volt.
+                <br> A program jelenleg letölthető NetBeans projekt formájában és ott futtatható parancssoros környezetben.</p>
+            <a href="https://mega.nz/#!jksiUa5L!QrMSmWSCrp6KUDYSXDmalcRDxh28ioYUGQzObb-pBEU">
+                <img class="displayed" src="pic/icon.svg">
+            </a>
+            <a href="https://mega.nz/#!jksiUa5L!QrMSmWSCrp6KUDYSXDmalcRDxh28ioYUGQzObb-pBEU">
+                <p class="letoltes">
+                    <b>Letöltés</b>
+                </p>
+            </a>
+            <h3>A program működése:</h3>
+            <p>A program 6db 2x2-es tömböt használ mint a kocka oldalai. A színek karakter formában vannak tárolva pl.: Kék
+                - k
+                <br>12 forgatási metódust tartalmaz a program. Úgy kell elképzelni mintha egyik oldalt magunk felé tartanánk
+                és ahhoz viszonyítva jobb oldalt felfele vagy lefele tudjuk forgatni. forgatási metódus pl.: forgJf(); vagy
+                forgJl();
+                <br> Ezek után egy keverési metódus a létező forgató metódusok segítségével véletlenszerűen összekeveri a kockát
+                <br>A program legnagyobb része a kockát megoldó metódus mely az
+                <a href="algoritmus.html">algoritmus</a> fülön található meg kifejtve.
+        </section>
+        <hr class="footerhr">
+        <footer>
+            <p>2 x 2 Rubik kocka kirakás. Metódusok, algoritmusok leírása, magyarázata. Szerző: Tóth Ágoston</p>
+            <img id="also" src="pic/kocka3.PNG" width="75px">
+        </footer>
+    </main>
+
+</body>
+
 </html>
