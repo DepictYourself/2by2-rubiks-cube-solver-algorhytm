@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RKS - Rubik Kocka Solver</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="rubik,Rubik,kocka,kirakós,varázs kocka, Rubik's, Cube, Solver, kirakó,2x2,3x3,java,program,objektum,orientált,megoldó,">
+        <meta name="description" content="Az oldal 2x2 rubik kocka kirakó java program letöltés leírása">
+        <link rel="stylesheet" href="style.css">
+		<link href='https://fonts.googleapis.com/css?family=Orbitron:700&effect=3d' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <main>
+            <img id="header" src="pic/headerpic1.jpg" alt="fejléc kép">
+            <header>            
+                <div class="font-effect-3d"><h1>RKS - Rubik Kocka Solver</h1></div>		
+            </header>
+            
+            <div id="nav">
+                <ul>
+                    <li><a href="index.html"><img id="button" src="pic/home.svg" > Home</a></li>
+                    <li><a href="bemutatkozas.html"><img id="button" src="pic/smile.svg"> Bemutatkozás</a></li>
+                    <li><a class="active" href="algoritmus.html"><img id="button" src="pic/interface.svg"> Algoritmus</a></li>
+                    <li><a href="bolyai.html"><img id="button" src="pic/book.svg"> Iskolánk</a></li>
+                </ul>
+            </div>        
+            <section>
+                <h3>Kirakó algoritmus</h3>
+				<p><b>130 elágazás 1200 sor.</b><br>
+				A kocka kirakása egy úgynevezett "Amatőr" módszerrel történik. Sajnos a módszer természeténél fogva az algoritmus nem túl "effektív", 40-77 lépés között képes kirakni a kockát.<br>
+                Az algoritmus működése:</p>
+                
+				<h4>1. Fehér oldal kirakása oldalsó színekkel együtt</h4>
+				<h4>2. Sárga oldal kirakása (Itt az ortega metódusból használtam algoritmusokat)</h4>
+				<h4>3. A 2. sor rendezése színhelyesen.</h4>
+                
+				<h5>Fehér oldal</h5>
+				<img src="pic/kocka1.PNG" alt="kocka fehér oldal kirakás ábrázolás">
+				<p>Ez volt a legnehezebb lépés a kocka kirakásánál hiszen az algoritmus if-es szerkezetekkel operál, tehát gyakorlatilag minden lehetséges előfordulást lekellett kezelni feltételek segítségével. Ez a gyakorlatban azt jelenti, hogy 4 db fehér sarok kockát kellett helyre rakni. Mivel ezek sarok kockák 2 másik színnel együtt fognak előfordulni mindig és oldalt az első sornak is stimmelnie kell ennél az algoritmusnál sok fejfájást okozott a megoldás.<br>
+				A megoldás végül 4db ifes szerkezet lett a 4 kocka minden lehetséges előfordulásával. Az 1. 24 elágazás, a 2. 21 elágazás, a 3. 18 elágazás, a 3. 15 elágazásból áll. Könnyen belátható, hogy a kocka 8 sarok kockából áll mi mindig egy bizonyos tulajdonságú kockát keresünk és azt a megfelelő helyre akarjuk rakni. Tehát az algoritmus bejárja a táblákat vagyis a kockát és ha talál egy F karaktert a kiegészítő színekkel a megadott forgatások segítségével a helyére rakja. A</p>
+				<h5>Sárga oldal</h5>
+				<img src="pic/kocka2.PNG" alt="kocka sárga oldal kirakás ábzásolása"> 
+				<p>A sárga oldalnak mindig párhuzamosan kell lennie a fehérre.A megoldásnál az Ortega félprofi módszerből ismert 7 előfordulási lehetőséget és azokra adott algoritmusokat használtam fel. Ugye az a 7 előfordulási lehetőség valójában 7 * 4 = 28 mivel a sárga a variációk bárhogy ellehetnek forgatva. Az ember számára elég ha 7 variációt megadunk egy kirakási segédletnél a többit felfogja ismerni, hogy igen ez ugyanaz csak 45 fokkal elvan forgatva. Ezeket a programban mind if-es szerkezetek formájában logikai kapcsolatokkal kellett kezelni. Így egy if-es szerkezettel melynek 28 elágazása lett. Az összes permutációt lefedve</p>
+				<h5>2. Sor rendezése</h5>
+				<img src="pic/kocka3.PNG" alt="kocka kirakott állapot ábrázolása">
+				<p>Az utolsó sor rendezését szintén egyetlen if-es szerkezettel lett megoldva mely 24 elágazásból áll, mivel ennyi lehetséges eset van ennél a lépésnél. Azért 24 mert ugye a sarok kockák sárga színeit helyre raktuk így 4 lehetséges színpárunk maradt ami a 4! = 24 lehetséges variációt hagyva nekünk.</p>
+            </section>        
+            <hr class="footerhr">
+            <footer>
+                <p>2 x 2 Rubik kocka kirakás. Metódusok, algoritmusok leírása, magyarázata. Szerző: Tóth Ágoston</p>
+                <img id="also" src="pic/kocka3.PNG" width="75px">
+            </footer>
+        </main>
+        
+    </body>
+</html>
